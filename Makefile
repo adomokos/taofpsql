@@ -18,7 +18,7 @@ run-with-args: ## Runs sql file with passed-in arguments
 		 psql -U $(POSTGRES_USER) -d $(POSTGRES_DB) --no-psqlrc \
 		 --set n=1 --set name=Aerosmith \
 		 -P format=html \
-		 -f 04-small-app/psql-input-args.sql
+		 -f src/04-small-app/psql-input-args.sql
 
 help: ## Prints this help message
 	@grep -h -E '^[a-zA-Z0-9\._-]+:.*?## .*$$' $(MAKEFILE_LIST) |\
